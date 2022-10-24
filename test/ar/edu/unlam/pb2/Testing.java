@@ -49,35 +49,15 @@ public class Testing {
 		 try
 			{
 			    String filename= "D:\\documentos\\Desktop\\Nuevo documento de texto.txt";
-//			    OutputStreamWriter fw = new OutputStreamWriter(new FileOutputStream(filename), "UTF8");
 			    FileWriter fos = new FileWriter(filename,true); //the true will append the new data
 			    fos.write(json);//appends the string to the file
 			    fos.close();
-//			    fw.close();
 			}
 		 catch(IOException ioe)
 			{
 			    System.err.println("IOException: " + ioe.getMessage());
 			}
 	 }
-	 
-	 
-	 //SEGUIR CON ESTO
-//	 @Test
-//	 public void deserializeFile() {
-//		 File input = new File("D:\\documentos\\Desktop\\Nuevo documento de texto.json");
-//		 String name = null;
-//		 try {
-//			 JsonElement fileElement = JsonParser.parseReader(new FileReader(input));
-//			 JsonObject fileObject = fileElement.getAsJsonObject();
-//			 
-//			 name = fileObject.get("name").getAsString();
-//		 } catch(FileNotFoundException e) {
-//			 e.printStackTrace();
-//		 }
-//		 System.out.println(name);
-//	 
-//	 }
 	 
 }
 
